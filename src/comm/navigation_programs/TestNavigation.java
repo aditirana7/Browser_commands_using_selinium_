@@ -12,13 +12,19 @@ public class TestNavigation {
 		driver.manage().window().maximize();
 		String URL=driver.getCurrentUrl();
 		System.out.println(URL);
+		
 		driver.navigate().to("https://www.Yahoo.com/");
-		URL=driver.getCurrentUrl();
-		System.out.println(URL);
-		Thread.sleep(5000);
 		driver.navigate().back();
 		URL=driver.getCurrentUrl();
 		System.out.println(URL);
+		
+		driver.navigate().forward();//forward
+		URL=driver.getCurrentUrl();
+		System.out.println(URL);
+		
+		Thread.sleep(5000);
+		driver.navigate().refresh();
+		driver.quit();
 
 	}
 }
